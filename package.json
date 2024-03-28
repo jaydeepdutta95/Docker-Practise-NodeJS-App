@@ -14,7 +14,7 @@
       "express": "^4.16.4"
     },
     "scripts": {
-      "test": "jest"
+      "test": "npm run unit-tests && npm run ui-tests"
     }
     
 
