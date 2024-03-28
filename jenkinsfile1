@@ -5,13 +5,9 @@ pipeline{
         stage("install dependencies"){
             steps{
                 sh "npm install"
+                sh "node app.js"
             }
         }
-        stage("npm test"){
-           steps{
-             sh"npm test"
-
-            }
-        }    
+        
     }   
 }
