@@ -11,9 +11,9 @@ pipeline{
          stage('Git Checkout') {
             steps {
                 script {
-                    git branch: ${branch}
+                    git branch: ${"branch"}
                         //credentialsId: 'Credential ID',
-                        url: ${giturl}
+                        url: ${"giturl"}
                 }
             }
         }
