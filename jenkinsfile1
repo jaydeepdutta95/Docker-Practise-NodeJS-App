@@ -6,6 +6,7 @@ pipeline{
             steps{
                 sh "npm install"
                 sh "node app.js"
+                sh "node -v"
             }
         }
         
