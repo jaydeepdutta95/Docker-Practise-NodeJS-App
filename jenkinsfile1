@@ -1,7 +1,22 @@
+
+def giturl= "https://github.com/mohandevops1869/CICD-Project-1-Node-Js-App.git"
+def giturl1= "https://github.com/mohandevops1869/nodejs-app-mss.git"
+def branch = "nodeapp"
+
 pipeline{
     agent any
     tools {nodejs "nodejs"}
     stages{
+
+         stage('Git Checkout') {
+            steps {
+                script {
+                    git branch: ${branch}
+                        //credentialsId: 'Credential ID',
+                        url: ${giturl}
+                }
+            }
+        }
         stage("install dependencies"){
             steps{
                 sh "npm install"
